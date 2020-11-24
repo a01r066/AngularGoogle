@@ -1,0 +1,21 @@
+<h3>Products</h3>
+<div *ngFor="let product of products; let i = index">
+  <ul class="list-group">
+    <li class="list-group-item list-group-item-light title" style="cursor: pointer" (click)="onClickItem(i)">
+      <div class="row">
+        <div class="col-11">
+          <a [title]="product.name + ' details'">
+            {{ product.name }}<br>
+            <p class="subtitle" *ngIf="product.desc || product.price">Description: {{ product.desc }}<br>
+            Price: ${{ product.price }}</p>
+          </a>
+          <button class="btn btn-primary" (click)="share(i)">share</button>
+        </div>
+        <div class="col-1" style="margin-top: auto; margin-bottom: auto">
+          <app-product-alerts [product]="product" (notify)="onNotify()"></app-product-alerts>
+        </div>
+      </div>
+    </li>
+  </ul>
+</div>
+
