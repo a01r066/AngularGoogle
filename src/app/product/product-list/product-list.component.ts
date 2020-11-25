@@ -8,7 +8,6 @@ import {Product} from '../product.model';
   styleUrls: ['./product-list.component.css']
 })
 export class ProductListComponent implements OnInit {
-  title: string = '';
   products: Product[] = [];
 
   constructor(private productService: ProductService) { }
@@ -17,16 +16,16 @@ export class ProductListComponent implements OnInit {
     this.products = this.productService.getProducts();
   }
 
-  onClickItem(index: number){
-    // console.log("Product: " + this.products[index].name);
-  }
-
-  share(index: number){
-    // console.log("Share: " + this.products[index].name);
-    window.alert(this.products[index].name + " has been shared!");
-  }
-
-  onNotify(){
-    window.alert("You will be notified when product goes on sale!");
-  }
+  // onClickItem(index: number){
+  //   // console.log("Product: " + this.products[index].name);
+  // }
+  //
+  // share(index: number){
+  //   // console.log("Share: " + this.products[index].name);
+  //   window.alert(this.products[index].name + " has been shared!");
+  // }
+  //
+  // onNotify(){
+  //   window.alert("You will be notified when product goes on sale!");
+  // }
 }

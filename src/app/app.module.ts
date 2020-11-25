@@ -9,6 +9,10 @@ import { ProductItemComponent } from './product/product-list/product-item/produc
 import {AppRoutingModule} from './app-routing.module';
 import { NavbarComponent } from './navbar/navbar.component';
 import { ProductAlertsComponent } from './product/product-alerts/product-alerts.component';
+import {ReactiveFormsModule} from '@angular/forms';
+import { CartComponent } from './cart/cart.component';
+import { ShippingComponent } from './shipping/shipping.component';
+import {HttpClientModule} from '@angular/common/http';
 
 @NgModule({
   declarations: [
@@ -18,11 +22,15 @@ import { ProductAlertsComponent } from './product/product-alerts/product-alerts.
     ProductDetailComponent,
     ProductItemComponent,
     NavbarComponent,
-    ProductAlertsComponent
+    ProductAlertsComponent,
+    CartComponent,
+    ShippingComponent
   ],
   imports: [
     BrowserModule,
-    AppRoutingModule
+    ReactiveFormsModule,
+    AppRoutingModule,
+    HttpClientModule
   ],
   providers: [],
   bootstrap: [AppComponent]
